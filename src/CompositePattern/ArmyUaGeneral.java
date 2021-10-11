@@ -3,7 +3,7 @@ package CompositePattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmyUaGeneral{
+public class ArmyUaGeneral implements Army{
     private List<Army> army = new ArrayList<Army>();
 
     public void addArmyUnit(Army army){
@@ -14,7 +14,8 @@ public class ArmyUaGeneral{
         this.army.remove(army);
     }
 
-    public void armyAlreadyGone(){
+    @Override
+    public void ExecuteOrder() {
         System.out.println("Army are ready for war...");
         for (Army army : army) {
             army.ExecuteOrder();

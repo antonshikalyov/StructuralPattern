@@ -7,20 +7,19 @@ public class Composite {
         Army tanks = new Tanks();
 
         ArmyUaGeneral generalArmy = new ArmyUaGeneral();
-        ArmyUaGeneral generalArmy1 = new ArmyUaGeneral();
 
 
         generalArmy.addArmyUnit(infantry);
         generalArmy.addArmyUnit(infantry);
         generalArmy.addArmyUnit(pilots);
         generalArmy.addArmyUnit(tanks);
-        generalArmy.armyAlreadyGone();
+        generalArmy.ExecuteOrder();
 
 
-        generalArmy.armyAlreadyGone();
+        generalArmy.ExecuteOrder();
         System.out.println();
         generalArmy.removeArmyUnit(infantry);
-        generalArmy.armyAlreadyGone();
+        generalArmy.ExecuteOrder();
 
     }
 }
